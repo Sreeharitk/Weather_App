@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap');
+
+html{
+    box-sizing: border-box;
+}
+*,*::before,*::after{
+    box-sizing: inherit;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Merriweather', serif;
+}
+
+.bg-section{
+    background-image: url("./images/bg-2.jpg");
+    height: 100vh;
+    filter: blur(5px);
+}
+
+.main{
+    position: absolute;
+    z-index: 2;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+}
+
+.search{
+    display: flex;
+    justify-content:center;
+}
+
+.search input{
+    background-color: rgba(0,0,0, 0.4);
+    color: snow;
+    font-size: 20px;
+    text-align: center;
+}
+
+.search input:focus{
+    border: none;
+    background-color:rgba(0,0,0, 0.4);
+    color: snow;
+}
+
+.btns{
+    /* background-color: rgb(0,0,0); */
+    background-color: rgba(0,0,0, 0.4);
+    border: none;
+    border-radius: 10px;
+}
+
+.weather-img{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(0,0,0, 0.4);
+    border-radius: 20px;
+}
+
+#pimg{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.weather-icon{
+	width: 100%;
+  height: 130px;
+  padding: 10px;
+}
+
+.weather-details{
+    display: flex;
+    justify-content: center;
+    background-color: rgba(0,0,0, 0.4);
+    border-radius: 20px;
+    width: 100%;
+}
+
+.temp-size{
+    font-size: 50px;
+}
+
+
+/* responsive */
+@media (max-width:1000px) {
+    .bg-section{
+        height: 115vh;
+    }
+    .main{
+        top:58%;
+    }
+    .weather-img{
+        width: 70% !important;
+    }
+    .temp-size{
+        font-size: 40px;
+    }
+}
+
+@media (max-width:650px) {
+    .cname{
+        width: 100% !important;
+    }
+    .weather-img{
+        width: 100% !important;
+    }
+    .weather-img h1{
+        font-size: 20px;
+    }
+    .weather-img h2{
+        font-size: 18px;
+    }
+    .temp-size{
+        font-size: 30px;
+    }
+    .temp-size1{
+        font-size: 17px !important;
+    }
+    .ts2{
+        text-align: start !important;
+    }
+}
